@@ -12,4 +12,6 @@
 
 class Author < ActiveRecord::Base
   attr_accessible :dob, :gender, :name
+  
+  validates :name, :presence => true
 end
