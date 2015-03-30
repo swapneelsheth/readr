@@ -1,4 +1,7 @@
 Readr::Application.routes.draw do
+  resources :reviews
+
+
   resources :books
 
 
