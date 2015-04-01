@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :author %><br />
-    <%= f.text_field :author_id %>
+    <%= collection_select :book, :author_id, Author.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
