@@ -12,5 +12,5 @@
 
 class Review < ActiveRecord::Base
   belongs_to :book
-  attr_accessible :description, :rating
+  attr_accessible :description, :rating, :book_id
 end
