@@ -1,3 +1,28 @@
+# == Route Map
+#
+#     reviews GET    /reviews(.:format)          reviews#index
+#             POST   /reviews(.:format)          reviews#create
+#  new_review GET    /reviews/new(.:format)      reviews#new
+# edit_review GET    /reviews/:id/edit(.:format) reviews#edit
+#      review GET    /reviews/:id(.:format)      reviews#show
+#             PUT    /reviews/:id(.:format)      reviews#update
+#             DELETE /reviews/:id(.:format)      reviews#destroy
+#       books GET    /books(.:format)            books#index
+#             POST   /books(.:format)            books#create
+#    new_book GET    /books/new(.:format)        books#new
+#   edit_book GET    /books/:id/edit(.:format)   books#edit
+#        book GET    /books/:id(.:format)        books#show
+#             PUT    /books/:id(.:format)        books#update
+#             DELETE /books/:id(.:format)        books#destroy
+#     authors GET    /authors(.:format)          authors#index
+#             POST   /authors(.:format)          authors#create
+#  new_author GET    /authors/new(.:format)      authors#new
+# edit_author GET    /authors/:id/edit(.:format) authors#edit
+#      author GET    /authors/:id(.:format)      authors#show
+#             PUT    /authors/:id(.:format)      authors#update
+#             DELETE /authors/:id(.:format)      authors#destroy
+#
+
 Readr::Application.routes.draw do
   resources :reviews
 
