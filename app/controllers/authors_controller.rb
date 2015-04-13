@@ -9,8 +9,21 @@ class AuthorsController < ApplicationController
       format.json { render json: @authors }
     end
   end
+  
   def rating
     @rating = Author.find(params[:id]).reviews.average(:rating)
+  end
+  
+  def sort
+    # @authors = Author.order(params[:field])
+    # @authors = Author.order("?", params[:field])
+    
+    @authors = []
+    if (Author.attribute_names.include? (params[:field])) then
+      @authors = Author.order(params[:field])
+    end
+    
+    render :index
   end
 
   # GET /authors/1

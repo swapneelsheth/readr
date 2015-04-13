@@ -37,6 +37,10 @@ Readr::Application.routes.draw do
     member do
       get 'rating'
     end
+    
+    collection do
+      get 'sort/:field' => 'authors#sort'
+    end
   end
 
 
