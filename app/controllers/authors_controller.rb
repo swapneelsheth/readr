@@ -9,6 +9,9 @@ class AuthorsController < ApplicationController
       format.json { render json: @authors }
     end
   end
+  def rating
+    @rating = Author.find(params[:id]).reviews.average(:rating)
+  end
 
   # GET /authors/1
   # GET /authors/1.json

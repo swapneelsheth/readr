@@ -33,7 +33,11 @@ Readr::Application.routes.draw do
   resources :books
 
 
-  resources :authors
+  resources :authors do
+    member do
+      get 'rating'
+    end
+  end
 
 
   # The priority is based upon order of creation:
