@@ -26,7 +26,8 @@
 Readr::Application.routes.draw do
   root :to => 'authors#index'
   
-  resources :reviews
+  # resources :reviews, :only => [:index, :show]
+  resources :reviews, :except => :destroy
 
 
   resources :books
