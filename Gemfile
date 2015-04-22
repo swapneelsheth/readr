@@ -5,12 +5,15 @@ gem 'rails', '3.2.21'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 gem 'annotate'
 
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
+
+group :production do
+  gem 'pg'
+end
 
 group :test, :development do
   gem 'cucumber-rails', :require => false
@@ -18,6 +21,7 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
+  gem 'sqlite3'
 end
 
 # Gems used only for assets and not required
